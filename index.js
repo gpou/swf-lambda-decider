@@ -8,9 +8,9 @@ module.exports = function (workflowFunction) {
 
   return function(event, context) {
 
-    var d = new DecisionTask(event);
+    var d = new DecisionTask(event, context);
 
-    console.log('Running workflow function...');
+    console.log('Running lambda workflow function');
 
     try {
       workflowFunction(d);
